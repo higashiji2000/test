@@ -33,7 +33,7 @@
     display: none;
   }
   .xs {
-    display: block;
+    display: flex;
   }
 }
 /* デザインB（タブレット） */
@@ -43,7 +43,7 @@
     display: none;
   }
   .md {
-    display: block;
+    display: flex;
   }
 }
 /* デザインC(PC) */
@@ -53,6 +53,6 @@
     display: none;
   }
   .lg {
-    display: block;
+    display: flex;
   }
 }
