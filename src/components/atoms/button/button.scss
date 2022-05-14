@@ -1,0 +1,60 @@
+@use "../../variables" as *;
+
+.button {
+  display: flex;
+  background-color: $black;
+  color: $white;
+  font-family: Noto Sans JP;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  &.xs {
+    width: 180px;
+    height: 45px;
+  }
+  &.md {
+    width: 150px;
+    height: 55px;
+  }
+  &.lg {
+    width: 200px;
+    height: 55px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    background-color: $orange_bistre;
+  }
+}
+
+/* スマホ */
+@media screen and (max-width: $breakpoint-md - 1) {
+  .lg,
+  .md {
+    display: none;
+  }
+  .xs {
+    display: flex;
+  }
+}
+/* タブレット */
+@media screen and (min-width: $breakpoint-md) {
+  .lg,
+  .xs {
+    display: none;
+  }
+  .md {
+    display: flex;
+  }
+}
+/* PC */
+@media screen and (min-width: $breakpoint-lg) {
+  .xs,
+  .md {
+    display: none;
+  }
+  .lg {
+    display: flex;
+  }
+}
