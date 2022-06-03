@@ -1,0 +1,55 @@
+@use "../../variables" as *;
+.plan-list {
+  text-align: center;
+  margin-bottom: 24px;
+  &.odd {
+    border: solid 1px $gray_gainsboro;
+    & > dt {
+      background-color: $orange_zorba;
+      padding: 20px;
+    }
+  }
+  &.even {
+    border: solid 5px $orange_bistre;
+    & > dt {
+      background-color: $orange_bistre;
+      padding: 15.5px;
+    }
+  }
+  & > *:not(:last-child) {
+    border-bottom: solid 1px $gray_gainsboro;
+  }
+  & > dt {
+    color: $white;
+    font-family: $fontfamily-gothic;
+    font-size: $fontsize-l;
+  }
+  & > .plan-cost {
+    background-color: $gray_desertStorm;
+    padding: 24px;
+    & > .yen {
+      color: $orange_bistre;
+      font-family: "Noto Sans JP";
+      font-size: $fontsize-xxl;
+      font-weight: 700;
+      padding-bottom: 16px;
+      & > span {
+        font-size: $fontsize-l;
+      }
+    }
+    & > .monthly {
+      font-size: $fontsize-s;
+    }
+  }
+  & > .plan-exp {
+    font-size: $fontsize-s;
+    padding: 20px;
+  }
+}
+
+/* m */
+@media screen and (min-width: $breakpoint-sm) {
+  .plan-list {
+    margin-bottom: 0px;
+  }
+}
