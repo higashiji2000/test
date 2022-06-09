@@ -11,6 +11,7 @@
   font-family: $fontfamily-mincho;
   font-size: $fontsize-l;
   font-weight: 400;
+  margin-bottom: 6px;
 }
 
 .message_explanation {
@@ -28,6 +29,7 @@
   }
   .message_title {
     font-size: $fontsize-xl;
+    margin-bottom: 10px;
   }
   .message_explanation {
     line-height: 36px;
