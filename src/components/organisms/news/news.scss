@@ -1,21 +1,8 @@
 @use "../../variables" as *;
 
 .news {
-  width: 460px;
-  & > .news-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 32px;
-    & > h2 {
-      font-weight: 400;
-      font-size: $fontsize-xxl;
-      font-family: $fontfamily-mincho;
-      padding-right: 16px;
-    }
-    & > span {
-      font-size: $fontsize-m;
-    }
-  }
+  display: flex;
+  flex-direction: column;
   & > .news-contents-wrapper {
     border: solid 1px $gray_gainsboro;
     & > :not(:last-child) {
@@ -35,11 +22,5 @@
         text-overflow: ellipsis;
       }
     }
-  }
-  & > .news-footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 30px;
   }
 }
