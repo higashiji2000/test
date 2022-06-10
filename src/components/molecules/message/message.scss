@@ -1,0 +1,35 @@
+@use "../../variables" as *;
+
+.wrap_message {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.message_title {
+  font-family: $fontfamily-mincho;
+  font-size: $fontsize-l;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.message_explanation {
+  font-family: $fontfamily-gothic;
+  font-size: $fontsize-s;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+/* lg */
+@media screen and (min-width: $breakpoint-lg) {
+  .wrap_message {
+    padding: 52px 20px;
+  }
+  .message_title {
+    font-size: $fontsize-xl;
+    margin-bottom: 10px;
+  }
+  .message_explanation {
+    line-height: 36px;
+  }
+}
