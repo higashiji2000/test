@@ -3,31 +3,37 @@
 .news {
   display: flex;
   flex-direction: column;
+  margin-bottom: 35px;
   & > .news-contents-wrapper {
     border: solid 1px $gray_gainsboro;
+    margin-bottom: 14px;
     & > :not(:last-child) {
       border-bottom: solid 1px $gray_gainsboro;
     }
     & > .news-content {
       height: 85px;
       padding: 20px;
-      & > .date {
-        display: block;
-        line-height: 1;
-        font-size: $fontsize-xs;
-        color: $gray_nobel;
-        margin-bottom: 10px;
-      }
-      & > .news-title {
-        color: $black;
-        font-size: $fontsize-m;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        transition: color 0.2s ease;
+      & > a {
         &:hover {
-          color: $orange_bistre;
           text-decoration: none;
+        }
+        & > .date {
+          display: block;
+          line-height: 1;
+          font-size: $fontsize-xs;
+          color: $gray_nobel;
+          margin-bottom: 10px;
+        }
+        & > .news-title {
+          color: $black;
+          font-size: $fontsize-m;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          transition: color 0.2s ease;
+          &:hover {
+            color: $orange_bistre;
+          }
         }
       }
     }
