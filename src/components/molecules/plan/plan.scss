@@ -4,10 +4,10 @@
   list-style: none;
   text-align: center;
   margin-bottom: 24px;
+  padding-left: 0;
   @media screen and (min-width: $breakpoint-md) {
     margin-bottom: 0;
   }
-  padding-inline-start: 0;
   &.odd {
     border: solid 1px $gray_gainsboro;
     & > li:first-child {
@@ -17,21 +17,20 @@
   }
   &.even {
     border: solid 5px $orange_bistre;
-    & > li:first-child {
-      background-color: $orange_bistre;
-      padding: 15.5px;
-    }
-    & > li:last-child {
-      padding: 30px;
-      @media screen and (min-width: $breakpoint-md) {
-        padding: 20px;
+    & > li {
+      &:first-child {
+        background-color: $orange_bistre;
+        padding: 18px;
+      }
+      &:last-child {
+        padding: 20px 20px 15px;
       }
     }
   }
-  & > *:not(:last-child) {
-    border-bottom: solid 1px $gray_gainsboro;
-  }
   & > li {
+    &:not(:last-child) {
+      border-bottom: solid 1px $gray_gainsboro;
+    }
     &:first-child {
       color: $white;
       font-weight: 700;
