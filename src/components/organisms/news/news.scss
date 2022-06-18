@@ -6,17 +6,16 @@
   margin-bottom: 35px;
   & > .news-contents-wrapper {
     border: solid 1px $gray_gainsboro;
+    border-bottom: none;
     margin-bottom: 14px;
-    & > :not(:last-child) {
-      border-bottom: solid 1px $gray_gainsboro;
-    }
-    & > .news-content {
-      height: 85px;
-      padding: 20px;
-      & > a {
-        &:hover {
-          text-decoration: none;
-        }
+    & > .news-to-click {
+      &:hover {
+        text-decoration: none;
+      }
+      & > .news-content {
+        height: 85px;
+        padding: 20px;
+        border-bottom: solid 1px $gray_gainsboro;
         & > .date {
           display: block;
           line-height: 1;
