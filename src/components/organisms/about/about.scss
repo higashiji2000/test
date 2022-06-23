@@ -1,0 +1,25 @@
+@use "../../variables" as *;
+.about_wrapper {
+  & > .container {
+    & > .row {
+      & > .col {
+        padding: 0;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > .row:last-child {
+      background-color: $white_smoke;
+      & > .wrap_message {
+        padding: 32px 24px;
+        @media screen and (min-width: $breakpoint-lg) {
+          padding: 52px 26.5px;
+        }
+        & > .message_title {
+          color: $orange_bistre;
+        }
+      }
+    }
+  }
+}
