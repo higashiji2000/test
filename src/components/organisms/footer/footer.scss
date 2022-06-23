@@ -2,6 +2,10 @@
 .footer {
   & a {
     color: $black;
+    transition: 0.2s ease;
+    &:hover {
+      text-decoration: none;
+    }
   }
   & > .footer-top {
     display: flex;
@@ -16,11 +20,17 @@
     & > .footer-exp {
       font-size: $fontsize-s;
       margin-bottom: 20px;
+      padding: 0 20px;
     }
     & > .footer-icon {
       margin-bottom: 32px;
-      & > a:not(:last-child) {
-        margin-right: 14px;
+      & > a {
+        &:not(:last-child) {
+          margin-right: 14px;
+        }
+        &:hover {
+          color: $gray_nobel;
+        }
       }
     }
   }
@@ -43,6 +53,9 @@
           padding-right: 8px;
           border-right: 1px solid $black;
         }
+      }
+      & > a:hover {
+        color: $orange_bistre;
       }
     }
   }
