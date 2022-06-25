@@ -1,0 +1,72 @@
+@use "../../variables" as *;
+.footer {
+  & a {
+    color: $black;
+    transition: 0.2s ease;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  & > .footer-top {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    & > .footer-logo {
+      margin: 32px auto 20px;
+      & > img {
+        width: 150px;
+      }
+    }
+    & > .footer-exp {
+      font-size: $fontsize-s;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+    & > .footer-icon {
+      margin-bottom: 32px;
+      & > a {
+        &:not(:last-child) {
+          margin-right: 14px;
+        }
+        &:hover {
+          color: $gray_nobel;
+        }
+      }
+    }
+  }
+  & > .footer-middle {
+    margin-bottom: 0;
+    padding: 16px;
+    background-color: $white_smoke;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      justify-content: center;
+    }
+    & > .footer-link {
+      font-size: $fontsize-s;
+      @media (min-width: $breakpoint-md) {
+        &:not(:last-child) {
+          padding-right: 8px;
+          border-right: 1px solid $black;
+        }
+      }
+      & > a:hover {
+        color: $orange_bistre;
+      }
+    }
+  }
+  & > .footer-bottom {
+    text-align: center;
+    padding: 16px;
+    background-color: $black;
+    & > p {
+      font-size: $fontsize-xs;
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+}
